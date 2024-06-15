@@ -3,6 +3,7 @@
 ## Classic Puzzle - Easy
 
 ### Defibrillators
+[**Puzzle here!**](https://www.codingame.com/training/easy/defibrillators)
 
 #### TypeScript
 ```ts
@@ -101,6 +102,7 @@ class Defibrilator {
 ```
 
 ### MIME Type
+[**Puzzle here!**](https://www.codingame.com/training/easy/mime-type)
 
 #### TypeScript
 ```ts
