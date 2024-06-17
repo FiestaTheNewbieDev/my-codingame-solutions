@@ -11,6 +11,30 @@
 
 [**Puzzle here!**](https://www.codingame.com/training/easy/the-descent)
 
+#### Python
+
+```py
+from typing import Tuple
+
+# The while loop represents the game.
+# Each iteration represents a turn of the game
+# where you are given inputs (the heights of the mountains)
+# and where you have to print an output (the index of the mountain to fire on)
+# The inputs you are given are automatically updated according to your last actions.
+
+
+# game loop
+while True:
+    biggest: Tuple[int, int] = (-1, -1)
+
+    for i in range(8):
+        mountain_h = int(input())  # represents the height of one mountain.
+        biggest = (i, mountain_h) if biggest[1] < mountain_h else biggest
+
+    # The index of the mountain to fire on.
+    print(biggest[0])
+```
+
 #### TypeScript
 
 ```ts
@@ -33,6 +57,48 @@ while (true) {
   }
 
   console.log(biggest.index); // The index of the mountain to fire on.
+}
+```
+
+#### Java
+
+```java
+import java.util.*;
+
+/**
+ * The while loop represents the game.
+ * Each iteration represents a turn of the game
+ * where you are given inputs (the heights of the mountains)
+ * and where you have to print an output (the index of the mountain to fire on)
+ * The inputs you are given are automatically updated according to your last actions.
+ **/
+class Player {
+
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+
+        // game loop
+        while (true) {
+            Mountain biggest = null;
+
+            for (int i = 0; i < 8; i++) {
+                int mountainH = in.nextInt(); // represents the height of one mountain.
+                if (biggest == null || biggest.height < mountainH) biggest = new Mountain(i, mountainH);
+            }
+
+            System.out.println(biggest.index); // The index of the mountain to fire on.
+        }
+    }
+}
+
+class Mountain {
+    public int index;
+    public int height;
+
+    public Mountain(int index, int height) {
+        this.index = index;
+        this.height = height;
+    }
 }
 ```
 
