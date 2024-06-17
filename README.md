@@ -2,6 +2,32 @@
 
 ## Classic Puzzle - Easy
 
+### The Descent
+[**Puzzle here!**](https://www.codingame.com/training/easy/the-descent)
+
+#### TypeScript
+```ts
+/**
+ * The while loop represents the game.
+ * Each iteration represents a turn of the game
+ * where you are given inputs (the heights of the mountains)
+ * and where you have to print an output (the index of the mountain to fire on)
+ * The inputs you are given are automatically updated according to your last actions.
+ **/
+
+// game loop
+while (true) {
+    let biggest: { index: number; height: number };
+
+    for (let i = 0; i < 8; i++) {
+        const mountainH: number = parseInt(readline()); // represents the height of one mountain.
+       (!biggest || biggest.height < mountainH) && (biggest = { index: i, height: mountainH });
+    }
+
+    console.log(biggest.index);     // The index of the mountain to fire on.
+}
+```
+
 ### Defibrillators
 [**Puzzle here!**](https://www.codingame.com/training/easy/defibrillators)
 
