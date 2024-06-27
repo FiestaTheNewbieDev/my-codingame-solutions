@@ -2,6 +2,7 @@
 
 - [Classic Puzzle - Easy](#classic-puzzle---easy)
   - [The Descent](#the-descent)
+  - [Temperatures](#temperatures)
   - [Defibrillators](#defibrillators)
   - [MIME Type](#mime-type)
 
@@ -100,6 +101,36 @@ class Mountain {
         this.height = height;
     }
 }
+```
+
+### Temperatures
+
+[**Puzzle here!**](https://www.codingame.com/training/easy/temperatures)
+
+#### TypeScript
+
+```ts
+const n: number = parseInt(readline()); // the number of temperatures to analyse
+var inputs: string[] = readline().split(' ');
+
+const array: number[] = [];
+
+for (let i = 0; i < n; i++) {
+    const t: number = parseInt(inputs[i]);// a temperature expressed as an integer ranging from -273 to 5526
+    array.push(t);
+}
+
+let closest: {temperature: number; gap: number | null} = {temperature: 0, gap: null};
+for (let i = 0; i < array.length; i++) {
+    const gap = Math.abs(array[i] - 0);
+    const data = {
+        temperature: array[i],
+        gap
+    }
+    if (!closest.gap || closest.gap > data.gap || (closest.gap === data.gap && data.temperature > closest.temperature)) closest = data;
+}
+
+console.log(closest.temperature);
 ```
 
 ### Defibrillators
