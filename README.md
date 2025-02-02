@@ -5,6 +5,7 @@
   - [Temperatures](#temperatures)
   - [Defibrillators](#defibrillators)
   - [MIME Type](#mime-type)
+  - [Horse-Racing Duals](#horse-racing-duals)
 
 ## Classic Puzzle - Easy
 
@@ -267,4 +268,29 @@ for (let i = 0; i < Q; i++) {
   console.error(FNAME, extension);
   map.get(extension) ? console.log(map.get(extension)) : console.log("UNKNOWN");
 }
+```
+
+### Horse-Racing Duals
+
+[**Puzzle here!**](https://www.codingame.com/training/easy/horse-racing-duals)
+
+#### JavaScript
+
+```js
+const N = parseInt(readline());
+const temp = [];
+
+for (let i = 0; i < N; i++) {
+    temp.push(parseInt(readline()));
+}
+
+temp.sort((a, b) => a -b);
+
+let min = Infinity;
+
+for (let i = 1; i < temp.length; i++) {
+    min = Math.min(min, temp[i] - temp[i - 1])
+}
+
+console.log(min);
 ```
