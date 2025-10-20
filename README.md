@@ -6,7 +6,7 @@
   - [Defibrillators](#defibrillators)
   - [MIME Type](#mime-type)
   - [Horse-Racing Duals](#horse-racing-duals)
-  - [Create the longest sequence of 1s]()
+  - [Create the longest sequence of 1s](#create-the-longest-sequence-of-1s)
 
 ## Classic Puzzle - Easy
 
