@@ -6,6 +6,7 @@
   - [Defibrillators](#defibrillators)
   - [MIME Type](#mime-type)
   - [Horse-Racing Duals](#horse-racing-duals)
+  - [Create the longest sequence of 1s]()
 
 ## Classic Puzzle - Easy
 
@@ -293,4 +294,24 @@ for (let i = 1; i < temp.length; i++) {
 }
 
 console.log(min);
+```
+
+### Create the longest sequence of 1s
+
+[**Puzzle here!**](https://www.codingame.com/training/easy/create-the-longest-sequence-of-1s)
+
+#### Python
+
+```py
+b = input()
+
+arr = b.split("0")
+max = 0
+
+for i in range(0, len(arr) - 1):
+    tmp = "1".join([arr[i], arr[i + 1]])
+    if (len(tmp) > max):
+        max = len(tmp)
+
+print(max)
 ```
